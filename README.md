@@ -205,17 +205,14 @@ print(gemini_response)
    - This function sends the same healthcare query prompt to Claude using a hypothetical API (requests.post).
    - It returns Claude's response from the API call.
 
-```
-def get_claude_response(prompt):
-    headers = {
-        'Authorization': f'Bearer {CLAUDE_API_KEY}',
-        'Content-Type': 'application/json'
-    }
-    payload = {'prompt': prompt}
-    url = 'https://api.claude.ai/v1/complete'  # Example endpoint
-    response = requests.post(url, json=payload, headers=headers)
-    return response.json().get('completion', '')
-```
+   ```python
+   def get_chatgpt_response(prompt):
+       response = openai.Completion.create(
+           model="gpt-4",  # specify the model
+           prompt=prompt,
+           max_tokens=150
+       )
+       return response.choices[0].text.strip()
 
 
 ### **Functions for Getting Responses:**
