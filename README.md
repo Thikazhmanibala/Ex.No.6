@@ -223,8 +223,8 @@ print(gemini_response)
    - This function sends the healthcare query to Gemini using a generic API endpoint and retrieves the response.
    - It processes the response from Gemini using requests.post.
 
-```
-def get_gemini_response(prompt):
+   ```python
+   def get_gemini_response(prompt):
     headers = {
         'Authorization': f'Bearer {GEMINI_API_KEY}',
         'Content-Type': 'application/json'
@@ -233,7 +233,6 @@ def get_gemini_response(prompt):
     url = 'https://api.gemini.ai/v1/generate'  # Example endpoint
     response = requests.post(url, json=payload, headers=headers)
     return response.json().get('text', '')
-```
 
 ## 📊 Evaluation
 
