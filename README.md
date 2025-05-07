@@ -206,13 +206,15 @@ print(gemini_response)
    - It returns Claude's response from the API call.
 
    ```python
-   def get_chatgpt_response(prompt):
-       response = openai.Completion.create(
-           model="gpt-4",  # specify the model
-           prompt=prompt,
-           max_tokens=150
-       )
-       return response.choices[0].text.strip()
+    def get_claude_response(prompt):
+        headers = {
+            'Authorization': f'Bearer {CLAUDE_API_KEY}',
+            'Content-Type': 'application/json'
+        }
+        payload = {'prompt': prompt}
+        url = 'https://api.claude.ai/v1/complete'  # Example endpoint
+        response = requests.post(url, json=payload, headers=headers)
+        return response.json().get('completion', '')
 
 
 ### **Functions for Getting Responses:**
