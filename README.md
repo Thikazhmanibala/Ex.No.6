@@ -205,7 +205,7 @@ print(gemini_response)
    - This function sends the same healthcare query prompt to Claude using a hypothetical API (requests.post).
    - It returns Claude's response from the API call.
 
-   ```python
+```
 def get_claude_response(prompt):
     headers = {
         'Authorization': f'Bearer {CLAUDE_API_KEY}',
@@ -215,6 +215,8 @@ def get_claude_response(prompt):
     url = 'https://api.claude.ai/v1/complete'  # Example endpoint
     response = requests.post(url, json=payload, headers=headers)
     return response.json().get('completion', '')
+```
+
 
 ### **Functions for Getting Responses:**
 
@@ -222,7 +224,7 @@ def get_claude_response(prompt):
    - This function sends the healthcare query to Gemini using a generic API endpoint and retrieves the response.
    - It processes the response from Gemini using requests.post.
 
-   ```python
+```
 def get_gemini_response(prompt):
     headers = {
         'Authorization': f'Bearer {GEMINI_API_KEY}',
@@ -232,6 +234,7 @@ def get_gemini_response(prompt):
     url = 'https://api.gemini.ai/v1/generate'  # Example endpoint
     response = requests.post(url, json=payload, headers=headers)
     return response.json().get('text', '')
+```
 
 ## 📊 Evaluation
 
