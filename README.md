@@ -1,8 +1,8 @@
 # Ex.No.6 Development of Python Code Compatible with Multiple AI Tools
 
-### Date: 07-05-2025
-### Deevloped by: RAMYA R
-### Register no: 212223230169
+### Date: 24-05-25
+### Deevloped by: Thikazhmanibala
+### Register no: 212222060277
 # Aim:
 Write and implement Python code that integrates with multiple AI tools to automate the task of interacting with APIs, comparing outputs, and generating actionable insights with Multiple AI Tools
     
@@ -288,3 +288,9 @@ This project provides a robust solution for healthcare diagnostics by integratin
 
 # Result: 
 The corresponding Prompt is executed successfully.
+
+
+
+
+
+
